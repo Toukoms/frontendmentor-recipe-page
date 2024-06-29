@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      ul {
+          @apply list-disc list-outside ms-6 marker:text-nutmeg;
+      }
+      ol {
+        @apply list-decimal list-outside ms-6 marker:text-nutmeg;
+      }
+      li {
+        @apply pl-2 mb-2;
+      }
+      h2 {
+        @apply text-2xl text-nutmeg mb-4;
+      }
+      div {
+        @apply mb-8;
+      }
+      p {
+        @apply mb-4;
+      }
+      td {
+        @apply border-b;
+      }
+      td:nth-child(1) {
+        @apply p-4 pl-8 w-[55%];
+      }
+      td:nth-child(2) {
+        @apply text-nutmeg font-bold;
+      }
+  }
+  </style>
+
+  <title>Frontend Mentor | Recipe page</title>
+</head>
+
+<body class="bg-eggshell">
+
+  <main class="max-w-3xl mx-auto bg-white sm:p-8 md:mt-4 sm:mb-8 md:rounded-xl">
+    <div id="recipe-image" class="relative w-full aspect-[2] overflow-hidden sm:rounded-lg">
+      <img src="./assets/images/image-omelette.jpeg" alt="recipe_img" class="absolute w-full h-full object-cover object-center"/>
+    </div>
+    <div id="recipe-details" class="p-8 pb-4 text-dark-charcoal">
+      <div id="recipe-description">
+        <h1 class="text-5xl mb-4">Simple Omelette Recipe</h1>
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      </div>
+      <div id="recipe-preparation-time" class="bg-rose-white rounded-xl p-8 mb-8">
+        <h3 class="text-lg font-bold mb-2 text-dark-raspberry">Preparation time</h3>
+        <ul class="marker:text-dark-raspberry">
+          <li><span>Total:</span> Approximately 10 minutes</li>
+          <li><span>Preparation:</span> 5 minutes</li>
+          <li><span>Cooking:</span> 5 minutes</li>
+        </ul>
+      </div>
+      <div id="recipe-ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </div>
+      <div id="recipe-instructions">
+        <h2>Instructions</h2>
+        <ol>
+          <li><span>Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well
+            mixed.
+            You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li><span>Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li><span>Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to
+            ensure
+            the eggs evenly coat the surface.</li>
+          <li><span>Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny
+            in the
+            middle, sprinkle your chosen fillings over one half of the omelette.
+          </li>
+          <li><span>Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over
+            the
+            fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li><span>Enjoy:</span> Serve hot, with additional salt and pepper if needed.</li>
+        </ol>
+      </div>
+      <div id="recipe-nutrition">
+        <h2>Nutrition</h2>
+        <p>The table below shows nutritional values per serving without additional fillings.</p>
+        <table class="w-full">
+          <tbody>
+            <tr>
+              <td>Calories</td>
+              <td>277kcal</td>
+            </tr>
+            <tr>
+              <td>Carbohydrates</td>
+              <td>0g</td>
+            </tr>
+            <tr>
+              <td>Protein</td>
+              <td>20g</td>
+            </tr>
+            <tr>
+              <td>Fat</td>
+              <td>22g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/Toukoms">Toki</a>.
+  </div>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nutmeg: 'hsl(14 45% 36%)',
+            "dark-raspberry": 'hsl(332 51% 32%)',
+            "rose-white": 'hsl(330, 100%, 98%)',
+            eggshell: 'hsl(30, 54%, 90%)',
+            "light-grey": 'hsl(30, 18%, 87%)',
+            "wenge-brown": 'hsl(30, 10%, 34%)',
+            "dark-charcoal": 'hsl(24, 5%, 18%)',
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
